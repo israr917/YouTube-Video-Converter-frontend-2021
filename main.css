@@ -1,0 +1,81 @@
+body{
+
+    font-family: 'Comic Neue', cursive;
+
+}
+
+
+.title-underline{
+    width: 200px;
+    height: 5px;
+    margin: 0 auto;
+}
+
+.height{
+min-height: 100vh;
+
+}
+
+.about-picture{
+
+    background: url(./img/car.jpg)center/cover no-repeat fixed;
+    /*background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+*/
+}
+
+
+#filler {
+
+    background: linear-gradient( rgba(0, 0,182), rgba(219, 166, 116, 0.205)),url(./img/car.jpg)center/cover no-repeat fixed;
+}
+
+#button1{
+
+background: linear-gradient( rgb(235, 71, 30), rgba(204, 11, 123, 0.959));
+
+}
+
+.width{
+    width: 1000px;
+}
+
+.nav-style{
+
+    list-style-type: none;
+    font-size: 20px;
+    
+
+}
+
+.nav-style  a{
+
+    color: black;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+
+    
+}
+
+.nav-style  a:hover{
+    
+border-bottom: 1px solid black;
+
+}
+
+
+.footer-links-style a{
+
+    color:whitesmoke;
+}
+.footer-links-style a:hover{
+
+    border-bottom: 1px solid white;
+    color: white;
+
+}
+
