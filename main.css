@@ -4,6 +4,10 @@ body{
 
 }
 
+.navbar-nav { 
+  margin-left: auto; 
+  font-size: 25px;
+} 
 
 .title-underline{
     width: 200px;
@@ -16,16 +20,12 @@ min-height: 100vh;
 
 }
 
-.about-picture{
 
-    background: url(./img/car.jpg)center/cover no-repeat fixed;
-    /*background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-*/
+
+
+.width1{
+    width: 300px;
 }
-
 
 #filler {
 
@@ -41,6 +41,7 @@ background: linear-gradient( rgb(235, 71, 30), rgba(204, 11, 123, 0.959));
 .width{
     width: 1000px;
 }
+
 
 .nav-style{
 
@@ -68,6 +69,9 @@ border-bottom: 1px solid black;
 }
 
 
+.footer-links-style{
+    color:whitesmoke;
+}
 .footer-links-style a{
 
     color:whitesmoke;
@@ -78,4 +82,7 @@ border-bottom: 1px solid black;
     color: white;
 
 }
+
+
+
 
