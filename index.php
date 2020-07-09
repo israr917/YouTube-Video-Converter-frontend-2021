@@ -68,9 +68,13 @@
           </div>
 
           <div class="btn-group m-2">
-            <button class="btn btn-danger ">mp3</button>
+		  <iframe id="mp3Button" style="width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden; margin:10px;display:none;" scrolling="no" src="https://break.tv/widget/button/?link=https://www.youtube.com/watch?v=i62Zjga8JOM&color=DA4453&text=fff"></iframe>
+		  
+		  <!-- <button class="btn btn-danger ">mp3</button>
             <button class="btn btn-danger ">mp4</button>
-          </div>
+          -->
+		  
+		  </div>
 
         </div>
 
@@ -161,8 +165,26 @@ function showButtons(){
 
 var videoUrl = document.getElementById("youtubeVideoUrl").value;
 
+if(videoUrl == ""){
+alert("Please Enter Video Url");
+}
+else{
+
+document.getElementById("mp3Button").style.display = "block";
+
 videoId = subStrAfterChars(videoUrl, '=','b');
-alert(videoId);
+
+
+console.log(videoId);
+
+var newSrc = "https://break.tv/widget/button/?link=https://www.youtube.com/watch?v="+videoId+"&color=DA4453&text=fff";
+
+
+document.getElementById("mp3Button").src = newSrc;
+
+}
+
+
 
 
 }
