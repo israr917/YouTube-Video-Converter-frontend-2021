@@ -70,6 +70,8 @@
           <div class="btn-group m-2">
 		  <iframe id="mp3Button" style="width:100%;min-width:200px;max-width:350px;height:57px;border:0;overflow:hidden; margin:10px;display:none;" scrolling="no" src="https://break.tv/widget/button/?link=https://www.youtube.com/watch?v=i62Zjga8JOM&color=DA4453&text=fff"></iframe>
 		  
+		   <iframe id="mp4Button" src="https://break.tv/widget/mp4/?link=https://www.youtube.com/watch?v=i62Zjga8JOM&title=1&colormp3=c91818&text=fff&border=c9e218" width="400"
+		  height="170" scrolling="no" style="border:none;display:none"></iframe> 
 		  <!-- <button class="btn btn-danger ">mp3</button>
             <button class="btn btn-danger ">mp4</button>
           -->
@@ -165,39 +167,37 @@ function showButtons(){
 
 var videoUrl = document.getElementById("youtubeVideoUrl").value;
 
-if(videoUrl == ""){
-alert("Please Enter Video Url");
+
+
+
+var url = videoUrl;
+var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+if(videoid != null) {
+   console.log("video id = ",videoid[1]);
+   
+   
+   document.getElementById("mp3Button").style.display = "block";
+   document.getElementById("mp4Button").style.display = "block";
+
+	var newAudioSrc = "https://break.tv/widget/button/?link=https://www.youtube.com/watch?v="+videoid[1]+"&color=DA4453&text=fff";
+	var newVideoSrc = "https://break.tv/widget/mp4/?link=https://www.youtube.com/watch?v="+videoid[1]+"&title=1&colormp3=c91818&text=fff&border=c9e218";
+	
+	document.getElementById("mp3Button").src = newAudioSrc;
+	document.getElementById("mp4Button").src = newVideoSrc;
+   
+   
+} else { 
+    alert("The youtube url is not valid.");
 }
-else{
-
-document.getElementById("mp3Button").style.display = "block";
-
-videoId = subStrAfterChars(videoUrl, '=','b');
-
-
-console.log(videoId);
-
-var newSrc = "https://break.tv/widget/button/?link=https://www.youtube.com/watch?v="+videoId+"&color=DA4453&text=fff";
-
-
-document.getElementById("mp3Button").src = newSrc;
-
-}
-
-
 
 
 }
 
-function subStrAfterChars(str, char, pos)
-{
-  if(pos=='b')
-   return str.substring(str.indexOf(char) + 1);
-  else if(pos=='a') 
-   return str.substring(0, str.indexOf(char));
-  else
-  return str;  
-}
+
+
+
+
+
 
 </script>
 
