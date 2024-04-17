@@ -1,6 +1,4 @@
-Simple static website build using html css including 
-home page 
-Registration page
-About us page
-Shorts Codes ,Site Map,Terms & Conditions,FAQ's,Help,Track My Registration
-Contact Us pages.
+This Website youtube video converter is build using html css bootstrap js php
+including 
+home page about Contactus
+Major working of this website is coverting youtube video into mp3 file using third party api.
